@@ -1,10 +1,9 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import HomeComponent from "../components/SignupComponent"
+import React from "react";
+import SignupComponent from "../components/SignupComponent";
 export default function Signup() {
-    return (
-        <Layout>
-            <SignupComponent />
-        </Layout>
-    )
+  return (
+    <>
+      <SignupComponent />
+    </>
+  );
 }
