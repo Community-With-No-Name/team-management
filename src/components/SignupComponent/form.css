@@ -1,0 +1,27 @@
+.signupForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: fit-content;
+}
+.formContainer {
+  width: 50vh;
+  height: 60vh;
+  min-height: fit-content;
+  min-width: fit-content;
+  background-color: var(--baseColor);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.formBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formArea {
+  padding: 1rem;
+  background-color: #fff;
+}
