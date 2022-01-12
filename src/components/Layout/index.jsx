@@ -20,7 +20,7 @@ export default function Layout({children}) {
 
         <PickerArea />
 
-        <MenuButtonArea />
+        <MenuButtonArea setMobileMenuOpen={setMobileMenuOpen} />
 
         <DesktopNavArea />
 
@@ -53,7 +53,7 @@ export default function Layout({children}) {
               leaveFrom="transform opacity-100 scale-100 sm:translate-x-0 sm:scale-100 sm:opacity-100"
               leaveTo="transform opacity-0 scale-110  sm:translate-x-full sm:scale-100 sm:opacity-100"
             >
-              <MobileMenuNav />
+              <MobileMenuNav setMobileMenuOpen={setMobileMenuOpen} />
             </Transition.Child>
           </Dialog>
         </Transition.Root>

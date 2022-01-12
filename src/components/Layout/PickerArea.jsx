@@ -2,11 +2,13 @@ import React from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import {
   HomeIcon,
+  UserIcon
 } from '@heroicons/react/outline'
 
 export default function PickerArea() {
     const sidebarNavigation = [
-        { name: 'Open', href: '#', icon: HomeIcon, current: true },
+        { name: 'Open', href: '/', icon: HomeIcon, current: true },
+        { name: 'Open', href: '/sign-up', icon: UserIcon, current: false },
       ]
     return (
         <div className="mx-auto md:hidden">
