@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react"
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
+import ErrorPage from "./pages/404";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
           <AnimatePresence exitBeforeEnter>
   <Switch location={location} key={location.key}>
               <Route exact path="/" component={Home} />
-              {/* <Route exact path="*" /> */}
+              <Route exact path="*" component={ErrorPage} />
               </Switch>
           </AnimatePresence>
         )}

@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-  HomeIcon
+  HomeIcon,
+  UserIcon
 } from '@heroicons/react/outline'
 import {Link} from "react-router-dom"
 export default function NarrowSidebar() {
@@ -8,7 +9,8 @@ export default function NarrowSidebar() {
         return classes.filter(Boolean).join(' ')
       }
       const sidebarNavigation = [
-        { name: 'Open', href: '#', icon: HomeIcon, current: true },
+        { name: 'Open', href: '/', icon: HomeIcon, current: true },
+        { name: 'Open', href: '/sign-up', icon: UserIcon, current: false },
       ]
     return (
         <nav aria-label="Sidebar" className="hidden md:block md:flex-shrink-0 md:bg-gray-800 md:overflow-y-auto">
