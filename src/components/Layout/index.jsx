@@ -10,7 +10,7 @@ import MobileMenuNav from './MobileMenuNav'
 import NarrowSidebar from './NarrowSidebar'
 import Main from './Main'
 
-export default function Layout({children}) {
+export default function Layout({children, page}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -18,7 +18,7 @@ export default function Layout({children}) {
       <header className="relative flex items-center flex-shrink-0 h-16 bg-white">
         <LogoArea />
 
-        <PickerArea />
+        <PickerArea page={page} />
 
         <MenuButtonArea setMobileMenuOpen={setMobileMenuOpen} />
 
@@ -62,7 +62,7 @@ export default function Layout({children}) {
       {/* Bottom section */}
       <div className="flex flex-1 min-h-0 overflow-hidden">
         {/* Narrow sidebar*/}
-        <NarrowSidebar />
+        <NarrowSidebar page={page} />
 
         {/* Main area */}
         <Main children={children} />

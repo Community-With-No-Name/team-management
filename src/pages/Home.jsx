@@ -3,7 +3,7 @@ import Layout from '../components/Layout/'
 import HomeComponent from "../components/HomeComponent"
 export default function Home() {
     return (
-        <Layout>
+        <Layout page="Dashboard">
             <HomeComponent />
         </Layout>
     )
