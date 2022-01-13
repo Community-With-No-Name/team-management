@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react"
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
-import Signup from "./pages/Signup";
+import Registration from "./pages/Registration";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
               <Route exact path="/" component={Home} />
-              <Route exact path="/register" component={Signup} />
+              <Route exact path="/register" component={Registration} />
 
               {/* <Route exact path="*" /> */}
               </Switch>

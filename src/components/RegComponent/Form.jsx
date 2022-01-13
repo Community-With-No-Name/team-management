@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IndividualRegForm } from "./IndividualRegForm";
 import { TeamRegForm } from "./TeamRegForm";
-import teamIcon from "../../asset/signupForm/";
+import teamIcon from "../../asset/signupForm/teamIcon.jpg";
 
 export const Form = () => {
   const [ChangeForm, setChangeForm] = useState(false);
@@ -9,7 +9,7 @@ export const Form = () => {
   return (
     <div className="formContainer">
       <div className="iconArea">
-        <img src={teamIcon} alt="team Image" srcset="" />
+        <img src={teamIcon} alt="teamIcon" />
       </div>
       <div className="formArea">
         <div className="formBtn">

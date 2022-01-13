@@ -1,0 +1,10 @@
+.regBtn {
+  border-radius: 0.3rem;
+  box-shadow: 0 0 2px rgb(75, 73, 73);
+  transition: all .2s  ease-in-out;
+}
+
+.regBtn:hover {
+  background-color: rgb(247, 244, 244);
+  transform: scale(1.1);
+}

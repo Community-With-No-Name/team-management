@@ -1,4 +1,5 @@
 import React from "react";
+import { RegBtn } from "./Btn";
 
 export default function Main({ children }) {
   return (
@@ -10,6 +11,14 @@ export default function Main({ children }) {
         <h1 id="primary-heading" className="sr-only">
           Home
         </h1>
+
+        <div className="registerBtn flex justify-end">
+          <div className="btnArea flex p-3 my-5 ">
+            <RegBtn path="/register" value="Add Member" />
+            <RegBtn path="/register" value="Create Team" />
+          </div>
+        </div>
+
         {/* Your content */}
         {children}
       </section>
