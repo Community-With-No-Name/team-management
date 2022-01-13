@@ -1,9 +1,11 @@
 import React from "react";
 import RegComponent from "../components/RegComponent";
-export default function Registration() {
+import Layout from "../components/Layout";
+
+export default function Registration({status}) {
   return (
-    <>
-      <RegComponent />
-    </>
+    <Layout>
+      <RegComponent status={status} />
+    </Layout>
   );
 }

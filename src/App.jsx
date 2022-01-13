@@ -9,20 +9,29 @@ function App() {
 
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Route
-        render={({location}) => (
-          <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.key}>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/register" component={Registration} />
+          render={({ location }) => (
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.key}>
+                <Route exact path="/" component={Home} />
+                <Route
+                  exact
+                  path="/register/team"
+                  component={() => <Registration status={true} />}
+                />
+                <Route
+                  exact
+                  path="/register/member"
+                  component={() => <Registration status={false} />}
+                />
 
-              {/* <Route exact path="*" /> */}
+                {/* <Route exact path="*" /> */}
               </Switch>
-          </AnimatePresence>
-        )}
-         />
-        </BrowserRouter>
+            </AnimatePresence>
+          )}
+        />
+      </BrowserRouter>
     </>
   );
 }

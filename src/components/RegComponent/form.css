@@ -15,7 +15,7 @@
   min-height: fit-content;
   min-width: fit-content;
   background-color: var(--baseColor);
-  border-radius: 2rem;
+  border-radius: 0.3rem;
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -46,5 +46,23 @@
   background-color: #fff;
   width: 100%;
   height: 100%;
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 0.3rem;
+}
+
+.indBtn.memberActive,
+.teamBtn.teamActive {
+  background-color: var(--baseColor);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.indBtn:hover,
+.teamBtn:hover {
+  text-transform: uppercase;
+}
+
+.indBtn:hover.memberActive,
+.teamBtn:hover.teamActive {
+  text-transform: capitalize;
 }

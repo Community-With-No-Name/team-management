@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IndividualRegForm } from "./IndividualRegForm";
 import { TeamRegForm } from "./TeamRegForm";
-import teamIcon from "../../asset/signupForm/teamIcon.jpg";
+import { Link } from "react-router-dom";
 
-export const Form = () => {
+export const Form = ({ changeForm }) => {
   const [ChangeForm, setChangeForm] = useState(false);
+
+  useEffect(() => {
+    setChangeForm(changeForm);
+  }, [changeForm]);
+
+  const active = ChangeForm ? "teamActive" : "memberActive";
 
   return (
     <div className="formContainer">
-      <div className="iconArea">
-        <img src={teamIcon} alt="teamIcon" />
-      </div>
       <div className="formArea">
         <div className="formBtn">
-          <div className="indBtn" onClick={() => setChangeForm(false)}>
+          <Link to="/register/member" className={`${active} indBtn`}>
             Individual
-          </div>
-          <div className="teamBtn" onClick={() => setChangeForm(true)}>
+          </Link>
+          <Link to="/register/team" className={`${active} teamBtn`}>
             Team
-          </div>
+          </Link>
         </div>
 
         {ChangeForm ? <TeamRegForm /> : <IndividualRegForm />}

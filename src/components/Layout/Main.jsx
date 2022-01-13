@@ -14,8 +14,8 @@ export default function Main({ children }) {
 
         <div className="registerBtn flex justify-end">
           <div className="btnArea flex p-3 my-5 ">
-            <RegBtn path="/register" value="Add Member" />
-            <RegBtn path="/register" value="Create Team" />
+            <RegBtn path="/register/member" value="Add Member" />
+            <RegBtn path="/register/team" value="Create Team" />
           </div>
         </div>
 
