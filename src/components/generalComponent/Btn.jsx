@@ -9,3 +9,18 @@ export const RegBtn = ({ value, path }) => {
     </div>
   );
 };
+
+export const SubmistBtn = ({ value }) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+  };
+
+  return (
+    <input
+      className="submitBtn"
+      type="submit"
+      value={value}
+      onClick={handleClick}
+    />
+  );
+};

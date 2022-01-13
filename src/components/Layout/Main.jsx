@@ -1,5 +1,5 @@
 import React from "react";
-import { RegBtn } from "./Btn";
+import { RegBtn } from "../generalComponent/Btn";
 
 export default function Main({ children }) {
   return (
