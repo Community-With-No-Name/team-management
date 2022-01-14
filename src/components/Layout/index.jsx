@@ -10,7 +10,7 @@ import MobileMenuNav from './MobileMenuNav'
 import NarrowSidebar from './NarrowSidebar'
 import Main from './Main'
 
-export default function Layout({children}) {
+export default function Layout({children, page}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -18,9 +18,9 @@ export default function Layout({children}) {
       <header className="relative flex items-center flex-shrink-0 h-16 bg-white">
         <LogoArea />
 
-        <PickerArea />
+        <PickerArea page={page} />
 
-        <MenuButtonArea />
+        <MenuButtonArea setMobileMenuOpen={setMobileMenuOpen} />
 
         <DesktopNavArea />
 
@@ -53,7 +53,7 @@ export default function Layout({children}) {
               leaveFrom="transform opacity-100 scale-100 sm:translate-x-0 sm:scale-100 sm:opacity-100"
               leaveTo="transform opacity-0 scale-110  sm:translate-x-full sm:scale-100 sm:opacity-100"
             >
-              <MobileMenuNav />
+              <MobileMenuNav setMobileMenuOpen={setMobileMenuOpen} />
             </Transition.Child>
           </Dialog>
         </Transition.Root>
@@ -62,7 +62,7 @@ export default function Layout({children}) {
       {/* Bottom section */}
       <div className="flex flex-1 min-h-0 overflow-hidden">
         {/* Narrow sidebar*/}
-        <NarrowSidebar />
+        <NarrowSidebar page={page} />
 
         {/* Main area */}
         <Main children={children} />

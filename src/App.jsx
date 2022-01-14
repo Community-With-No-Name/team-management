@@ -2,7 +2,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react"
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
+
 import Registration from "./pages/Registration";
+
+
+import ErrorPage from "./pages/404";
 
 
 function App() {
@@ -25,8 +29,8 @@ function App() {
                   path="/register/member"
                   component={() => <Registration status={false} />}
                 />
+<Route exact path="*" component={ErrorPage} />
 
-                {/* <Route exact path="*" /> */}
               </Switch>
             </AnimatePresence>
           )}

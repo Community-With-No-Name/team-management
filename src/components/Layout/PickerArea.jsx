@@ -2,11 +2,13 @@ import React from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import {
   HomeIcon,
+  UserIcon
 } from '@heroicons/react/outline'
 
-export default function PickerArea() {
+export default function PickerArea({page}) {
     const sidebarNavigation = [
-        { name: 'Open', href: '#', icon: HomeIcon, current: true },
+        { name: 'Dashboard', href: '/', icon: HomeIcon },
+        { name: 'Error Page', href: '/sign-up', icon: UserIcon },
       ]
     return (
         <div className="mx-auto md:hidden">
@@ -17,7 +19,7 @@ export default function PickerArea() {
             <select
               id="inbox-select"
               className="pl-3 pr-8 text-base font-medium text-gray-900 border-0 rounded-md bg-none focus:ring-2 focus:ring-indigo-600"
-              defaultValue={sidebarNavigation.find((item) => item.current).name}
+              defaultValue={sidebarNavigation.find((item) => item.name===page).name}
             >
               {sidebarNavigation.map((item) => (
                 <option key={item.name}>{item.name}</option>
