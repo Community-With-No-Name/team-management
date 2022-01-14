@@ -12,6 +12,10 @@ export default function PickerArea({page}) {
         { name: 'Login Page',href: '/login', icon: UserIcon},
         { name: 'signUp Page', href: '/sign-up', icon: UserIcon}
       ]
+    const handlePageNavigation = (e) => {
+        const page = sidebarNavigation.filter((p)=>p.name===e.target.value)
+        window.location.href =  `${page[0].href}`
+    }
     return (
         <div className="mx-auto md:hidden">
           <div className="relative">
@@ -19,6 +23,7 @@ export default function PickerArea({page}) {
               Choose inbox
             </label>
             <select
+      onChange={handlePageNavigation}
               id="inbox-select"
               className="pl-3 pr-8 text-base font-medium text-gray-900 border-0 rounded-md bg-none focus:ring-2 focus:ring-indigo-600"
               defaultValue={sidebarNavigation.find((item) => item.name===page).name}
