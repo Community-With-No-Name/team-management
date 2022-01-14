@@ -8,7 +8,9 @@ import {
 export default function PickerArea({page}) {
     const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon },
-        { name: 'Error Page', href: '/sign-up', icon: UserIcon },
+        // { name: 'Error Page', href: '/sign-up', icon: UserIcon },
+        { name: 'Login Page',href: '/login', icon: UserIcon},
+        { name: 'signUp Page', href: '/sign-up', icon: UserIcon}
       ]
     return (
         <div className="mx-auto md:hidden">

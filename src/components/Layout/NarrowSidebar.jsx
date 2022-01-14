@@ -10,7 +10,10 @@ export default function NarrowSidebar({page}) {
       }
       const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-        { name: 'Error Page', href: '/sign-up', icon: UserIcon, current: false },
+        // { name: 'Error Page', href: '/sign-up', icon: UserIcon, current: false },
+        { name: 'Login Page', href: '/login', icon: UserIcon, current: false },
+        { name: 'signUp Page', href: '/sign-up', icon: UserIcon, current: false }
+        
       ]
     return (
         <nav aria-label="Sidebar" className="hidden md:block md:flex-shrink-0 md:bg-gray-800 md:overflow-y-auto">
