@@ -7,6 +7,8 @@ import Registration from "./pages/Registration";
 
 
 import ErrorPage from "./pages/404";
+import Login from "./pages/Login";
+import signUp from "./pages/signUp";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
                   path="/register/member"
                   component={() => <Registration status={false} />}
                 />
+<Route exact path="/login" component={Login} />
+              <Route exact path='/sign-up' component={signUp} />
 <Route exact path="*" component={ErrorPage} />
 
               </Switch>
