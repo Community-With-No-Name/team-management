@@ -37,5 +37,9 @@
   .fun {
     fill: initial;
   }
-  
-  
+form input{
+  width: 300px;
+  border: none;
+  border-bottom: 6px solid blue;
+  margin-top: 2em;
+}
