@@ -2,19 +2,24 @@ import React from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import {
   HomeIcon,
-  UserIcon
+  UserIcon,
+  LoginIcon,
+  UserAddIcon,
+  UserGroupIcon
 } from '@heroicons/react/outline'
 
-export default function PickerArea({page}) {
+export default function PickerArea({page, props}) {
     const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon },
-        // { name: 'Error Page', href: '/sign-up', icon: UserIcon },
-        { name: 'Login Page',href: '/login', icon: UserIcon},
-        { name: 'signUp Page', href: '/sign-up', icon: UserIcon}
+        { name: 'Teams', href: '/add-team', icon: UserGroupIcon},
+        { name: 'Members', href: '/add-member', icon: UserIcon},
+        { name: 'Login Page',href: '/login', icon: LoginIcon},
+        { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon}
       ]
+      console.log(props.history)
     const handlePageNavigation = (e) => {
-        const page = sidebarNavigation.filter((p)=>p.name===e.target.value)
-        window.location.href =  `${page[0].href}`
+        const pageTO = sidebarNavigation.filter((p)=>p.name===e.target.value)
+        props.history.replace(`${pageTO[0].href}`,`${pageTO[0].href}`)
     }
     return (
         <div className="mx-auto md:hidden">
@@ -26,8 +31,9 @@ export default function PickerArea({page}) {
       onChange={handlePageNavigation}
               id="inbox-select"
               className="pl-3 pr-8 text-base font-medium text-gray-900 border-0 rounded-md bg-none focus:ring-2 focus:ring-indigo-600"
-              defaultValue={sidebarNavigation.find((item) => item.name===page).name}
+              // defaultValue={sidebarNavigation.find((item) => page && item.name===page).name}
             >
+              <option>Please Select Page</option>
               {sidebarNavigation.map((item) => (
                 <option key={item.name}>{item.name}</option>
               ))}

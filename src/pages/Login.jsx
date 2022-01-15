@@ -9,17 +9,17 @@ import Layout from "../components/Layout";
 
 
 
-const Login = () => {
+const Login = (props) => {
     return ( 
-        <Layout page="Login Page">
+        <Layout page="Login Page" props={props}>
         <Container>
          <img src={Images} className="transition-all transform h-80 hover:scale-110 hover:-translate-y-5 sm:mt-5 sm:ml-20" /> 
         <form className="sm:w-80 sm:mt-10 sm:mr-8">
-           <input type="text" name="username" id="username" placeholder="Enter Username" className=" outline-none rounded"/>
+           <input type="text" name="username" id="username" placeholder="Enter Username" className="rounded outline-none "/>
            <input type="password" name="password" id="password" placeholder="Enter your password" className="rounded" required/>
-             <input type="submit" value="Login" className="text-center hover:bg-opacity-20 text-white bg-blue-700 rounded border-none py-2"/>
+             <input type="submit" value="Login" className="py-2 text-center text-white bg-blue-700 border-none rounded hover:bg-opacity-20"/>
              <p className="mt-5 text-center">Don't have an account? <Link to='/sign-up'
-             className="pl-2 text-blue-900 font-bold cursor-pointer rounded">SignUp</Link> </p>
+             className="pl-2 font-bold text-blue-900 rounded cursor-pointer">SignUp</Link> </p>
           </form>
         </Container>
         </Layout>

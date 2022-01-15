@@ -1,7 +1,10 @@
 import React from 'react'
 import {
   HomeIcon,
-  UserIcon
+  UserIcon,
+  LoginIcon,
+  UserAddIcon,
+  UserGroupIcon
 } from '@heroicons/react/outline'
 import {Link} from "react-router-dom"
 export default function NarrowSidebar({page}) {
@@ -10,9 +13,10 @@ export default function NarrowSidebar({page}) {
       }
       const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-        // { name: 'Error Page', href: '/sign-up', icon: UserIcon, current: false },
-        { name: 'Login Page', href: '/login', icon: UserIcon, current: false },
-        { name: 'signUp Page', href: '/sign-up', icon: UserIcon, current: false }
+        { name: 'Teams', href: '/add-team', icon: UserGroupIcon, current: false },
+        { name: 'Members', href: '/add-member', icon: UserIcon, current: false },
+        { name: 'Login Page', href: '/login', icon: LoginIcon, current: false },
+        { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon, current: false }
         
       ]
     return (
@@ -24,7 +28,7 @@ export default function NarrowSidebar({page}) {
                 to={item.href}
                 className={classNames(
                   item.name===page ? 'bg-gray-900 text-white' : 'text-gray-400 hover:bg-gray-700',
-                  'flex-shrink-0 inline-flex items-center justify-center h-14 w-14 rounded-lg'
+                  'flex-shrink-0 inline-flex items-center justify-center h-14 w-14 rounded-lg hover:w-96'
                 )}
               >
                 <span className="sr-only">{item.name}</span>
