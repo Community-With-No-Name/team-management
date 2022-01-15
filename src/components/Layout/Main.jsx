@@ -7,17 +7,17 @@ export default function Main({ children }) {
       {/* Primary column */}
       <section
         aria-labelledby="primary-heading"
-        className="flex flex-col flex-1 h-full min-w-0 overflow-hidden lg:order-last">
+        className="flex flex-col flex-1 w-full h-full min-w-0 overflow-hidden lg:order-last">
         <h1 id="primary-heading" className="sr-only">
           Home
         </h1>
 
-        <div className="registerBtn flex justify-end">
-          <div className="btnArea flex p-3 my-5 ">
+        {/* <div className="flex justify-end registerBtn">
+          <div className="flex p-3 my-5 btnArea ">
             <RegBtn path="/register/member" value="Add Member" />
             <RegBtn path="/register/team" value="Create Team" />
           </div>
-        </div>
+        </div> */}
 
         {/* Your content */}
         {children}
