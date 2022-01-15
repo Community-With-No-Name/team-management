@@ -1,0 +1,78 @@
+.signupForm,
+.formContainer {
+  display: flex;
+}
+
+.signupForm {
+  height: 100vh;
+  min-height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  width: 500px;
+  min-width: 350px;
+  height: 60vh;
+  min-height: fit-content;
+  background-color: var(--baseColor);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.formBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formArea {
+  padding: 1rem;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+.formArea form input,
+.formArea form label,
+.formArea form textarea {
+  display: block;
+  width: 100%;
+}
+
+
+.formArea form input[type="email"] {
+  margin-bottom: 1rem;
+}
+
+.formArea form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.formArea form label {
+  margin: 1rem 0;
+}
+
+.indBtn.memberActive,
+.teamBtn.teamActive {
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.2rem;
+}
+
+.indBtn:hover,
+.teamBtn:hover {
+  text-transform: uppercase;
+}
+
+.indBtn:hover.memberActive,
+.teamBtn:hover.teamActive {
+  text-transform: capitalize;
+}

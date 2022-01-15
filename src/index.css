@@ -3,37 +3,45 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Great Vibes;
-    src: url('https://fonts.googleapis.com/css?family=Great Vibes');
-  }
+  font-family: Great Vibes;
+  src: url("https://fonts.googleapis.com/css?family=Great Vibes");
+}
 @font-face {
-    font-family: Montserrat;
-    src: url('./fonts/Montserrat-Regular.ttf');
-  }
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Regular.ttf");
+}
 @font-face {
-    font-family: Dosis;
-    src: url('./fonts/Dosis-Regular.ttf');
-  }
+  font-family: Dosis;
+  src: url("./fonts/Dosis-Regular.ttf");
+}
 @font-face {
-    font-family: Dancing Script;
-    src: url('./fonts/static/DancingScript-Regular.ttf');
-  }
-  
-  html,body,* {
-    font-family: 'Dosis';
-  }
-  .font-writing {
-    font-family: 'Great Vibes',sans-serif;
-  }
-  .font-dosis {
-    font-family: 'Great Vibes',sans-serif;
-  }
-  .font-script {
-    font-family: 'Dancing Script',sans-serif;
-  }
-  .font-mont {
-    font-family: 'Montserrat',sans-serif;
-  }
+  font-family: Dancing Script;
+  src: url("./fonts/static/DancingScript-Regular.ttf");
+}
+
+html,
+body,
+* {
+  font-family: "Dosis";
+}
+.font-writing {
+  font-family: "Great Vibes", sans-serif;
+}
+.font-dosis {
+  font-family: "Great Vibes", sans-serif;
+}
+.font-script {
+  font-family: "Dancing Script", sans-serif;
+}
+.font-mont {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --baseColor: #1f2937;
+  --primaryColor: #6366f1;
+}
+
   .fun {
     fill: initial;
   }
@@ -43,3 +51,4 @@ form input{
   border-bottom: 6px solid blue;
   margin-top: 2em;
 }
+
