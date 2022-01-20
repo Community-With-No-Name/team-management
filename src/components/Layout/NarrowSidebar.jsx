@@ -4,7 +4,8 @@ import {
   UserIcon,
   LoginIcon,
   UserAddIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  FolderAddIcon
 } from '@heroicons/react/outline'
 import {Link} from "react-router-dom"
 export default function NarrowSidebar({page}) {
@@ -15,6 +16,7 @@ export default function NarrowSidebar({page}) {
         { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
         { name: 'Teams', href: '/add-team', icon: UserGroupIcon, current: false },
         { name: 'Members', href: '/add-member', icon: UserIcon, current: false },
+        { name: 'Add Project', href: '/add-project', icon: FolderAddIcon, current: false },
         { name: 'Login Page', href: '/login', icon: LoginIcon, current: false },
         { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon, current: false }
         

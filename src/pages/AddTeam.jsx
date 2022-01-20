@@ -3,6 +3,9 @@ import React from 'react'
 import Layout from '../components/Layout'
 import img from "../images/team.svg"
 export default function AddTeam(props) {
+
+  console.log(props)
+
   return (
     <Layout page="Teams" props={props}>
       <div className="grid w-full max-w-6xl max-h-screen grid-cols-1 gap-10 mx-auto sm:grid-cols-2">
