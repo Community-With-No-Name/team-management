@@ -10,12 +10,13 @@ import {
 
 export default function PickerArea({page, props}) {
     const sidebarNavigation = [
-        { name: 'Dashboard', href: '/', icon: HomeIcon },
-        { name: 'Teams', href: '/add-team', icon: UserGroupIcon},
-        { name: 'Members', href: '/add-member', icon: UserIcon},
-        { name: 'Login Page',href: '/login', icon: LoginIcon},
-        { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon}
-      ]
+      { name: "Dashboard", href: "/", icon: HomeIcon },
+      { name: "Teams", href: "/add-team", icon: UserGroupIcon },
+      { name: "Members", href: "/add-member", icon: UserIcon },
+      { name: "Add Project", href: "/add-project", icon: UserIcon },
+      { name: "Login Page", href: "/login", icon: LoginIcon },
+      { name: "signUp Page", href: "/sign-up", icon: UserAddIcon },
+    ];
       console.log(props.history)
     const handlePageNavigation = (e) => {
         const pageTO = sidebarNavigation.filter((p)=>p.name===e.target.value)
