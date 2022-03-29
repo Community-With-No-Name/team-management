@@ -13,8 +13,10 @@ export default function NarrowSidebar({page}) {
       }
       const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-        { name: 'Teams', href: '/add-team', icon: UserGroupIcon, current: false },
-        { name: 'Members', href: '/add-member', icon: UserIcon, current: false },
+        { name: 'Add Team', href: '/add-team', icon: UserGroupIcon, current: false },
+        { name: 'Teams', href: '/teams', icon: UserGroupIcon, current: false },
+        { name: 'Add Member', href: '/add-member', icon: UserIcon, current: false },
+        { name: 'Members', href: '/members', icon: UserIcon, current: false },
         { name: 'Login Page', href: '/login', icon: LoginIcon, current: false },
         { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon, current: false }
         

@@ -11,8 +11,10 @@ import {
 export default function PickerArea({page, props}) {
     const sidebarNavigation = [
         { name: 'Dashboard', href: '/', icon: HomeIcon },
-        { name: 'Teams', href: '/add-team', icon: UserGroupIcon},
-        { name: 'Members', href: '/add-member', icon: UserIcon},
+        { name: 'Add Team', href: '/add-team', icon: UserGroupIcon},
+        { name: 'Teams', href: '/teams', icon: UserGroupIcon},
+        { name: 'Add Member', href: '/add-member', icon: UserIcon},
+        { name: 'Members', href: '/members', icon: UserIcon},
         { name: 'Login Page',href: '/login', icon: LoginIcon},
         { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon}
       ]

@@ -14,7 +14,7 @@ export default function Layout({children, page, props}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden bg-gray-100">
+    <div className="flex flex-col h-screen overflow-x-hidden bg-gray-100">
       <header className="relative flex items-center flex-shrink-0 h-16 bg-white">
         <LogoArea />
 
@@ -30,7 +30,7 @@ export default function Layout({children, page, props}) {
       </header>
 
       {/* Bottom section */}
-      <div className="flex flex-1 min-h-0 overflow-hidden">
+      <div className="flex flex-1 min-h-0 overflow-x-hidden">
         {/* Narrow sidebar*/}
         <NarrowSidebar page={page} />
 

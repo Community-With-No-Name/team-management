@@ -12,6 +12,8 @@ import signUp from "./pages/signUp";
 import AddTeam from "./pages/AddTeam";
 import AddMember from "./pages/AddMember";
 import Verified from "./pages/Verified";
+import Teams from "./pages/Teams";
+import Members from "./pages/Members";
 
 
 function App() {
@@ -37,8 +39,10 @@ function App() {
 <Route exact path="/login" component={Login} />
 <Route exact path="/verified" component={Verified} />
 <Route exact path="/add-team" component={AddTeam} />
+<Route exact path="/teams" component={Teams} />
 <Route exact path="/add-member" component={AddMember} />
-              <Route exact path='/sign-up' component={signUp} />
+<Route exact path="/members" component={Members} />
+              <Route exact path='/sign-up' component={Registration} />
 <Route exact path="*" component={ErrorPage} />
 
               </Switch>
