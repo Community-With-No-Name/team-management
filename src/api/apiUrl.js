@@ -2,6 +2,8 @@ const API = process.env.NODE_ENV==="production" ? "https://cwnn-api.herokuapp.co
 
 const AUTH = `${API}/auth`
 
+export const GET_USERS = `${AUTH}/`
 export const LOGIN = `${AUTH}/login`
-export const REGISTER = `${AUTH}/register`
+export const UPDATE_ACCOUNT = (matric) => `${AUTH}/update_account/${matric}`
+export const CREATE_USER = `${AUTH}/create_user`
 

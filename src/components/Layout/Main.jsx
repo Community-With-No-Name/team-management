@@ -7,7 +7,7 @@ export default function Main({ children }) {
       {/* Primary column */}
       <section
         aria-labelledby="primary-heading"
-        className="flex flex-col flex-1 w-full h-full min-w-0 overflow-hidden lg:order-last">
+        className="flex flex-col flex-1 w-full h-full min-w-0 overflow-x-hidden lg:order-last">
         <h1 id="primary-heading" className="sr-only">
           Home
         </h1>

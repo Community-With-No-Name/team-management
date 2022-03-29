@@ -1,6 +1,5 @@
 export const queryKeys = {
-  getAllTransaction: "getAllTransaction",
-  getCreditHistory: "getCreditHistory",
-  getDebitHistory: "getDebitHistory",
-  getUserCourses: "getUserCourses",
+  getAllMembers: "getAllMembers",
+  getUser: "getUser",
+  getUsers: "getUsers",
 }

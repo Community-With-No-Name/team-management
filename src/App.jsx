@@ -11,6 +11,8 @@ import signUp from "./pages/signUp";
 import AddTeam from "./pages/AddTeam";
 import AddMember from "./pages/AddMember";
 import Verified from "./pages/Verified";
+import Teams from "./pages/Teams";
+import Members from "./pages/Members";
 import AddProject from "./pages/AddProject";
 
 
@@ -23,23 +25,17 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Switch location={location} key={location.key}>
                 <Route exact path="/" component={Home} />
-                {/* <Route
-                  exact
-                  path="/register/team"
-                  component={() => <Registration status={true} />}
-                />
-                <Route
-                  exact
-                  path="/register/member"
-                  component={() => <Registration status={false} />}
-                /> */}
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/verified" component={Verified} />
-                <Route exact path="/add-team" component={AddTeam} />
-                <Route exact path="/add-member" component={AddMember} />
-                <Route exact path="/sign-up" component={signUp} />
+<Route exact path="/login" component={Login} />
+<Route exact path="/verified" component={Verified} />
+<Route exact path="/add-team" component={AddTeam} />
+<Route exact path="/teams" component={Teams} />
+<Route exact path="/add-member" component={AddMember} />
+<Route exact path="/members" component={Members} />
+              <Route exact path='/sign-up' component={Registration} />
                 <Route exact path="/add-project" component={AddProject} />
-                <Route exact path="*" component={ErrorPage} />
+                
+<Route exact path="*" component={ErrorPage} />
+
               </Switch>
             </AnimatePresence>
           )}
