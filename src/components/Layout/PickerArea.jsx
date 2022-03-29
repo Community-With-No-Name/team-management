@@ -16,7 +16,9 @@ export default function PickerArea({page, props}) {
         { name: 'Add Member', href: '/add-member', icon: UserIcon},
         { name: 'Members', href: '/members', icon: UserIcon},
         { name: 'Login Page',href: '/login', icon: LoginIcon},
-        { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon}
+        { name: 'signUp Page', href: '/sign-up', icon: UserAddIcon},
+      { name: "Add Project", href: "/add-project", icon: UserIcon },
+  
       ]
       console.log(props.history)
     const handlePageNavigation = (e) => {
