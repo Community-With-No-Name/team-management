@@ -4,6 +4,7 @@ import { Images } from "../Images";
 import { Members } from "../Members";
 
 export default function membersCard({users}) {
+  console.log(users)
   
     return (
         <section className="py-8 bg-white">
@@ -13,7 +14,18 @@ export default function membersCard({users}) {
       users?.map((user,i)=>(
         <div className="flex flex-col col-span-1 text-center transition-all duration-500 transform bg-white divide-y divide-gray-200 rounded-lg shadow hover:scale-105 hover:shadow-xl" key={i}>
      <div className="flex flex-col flex-1 p-8">
+       {
+         user?.matric==="200591072" &&
+            <img className="flex-shrink-0 w-32 h-32 mx-auto" src={user?.images[Math.floor(Math.random() * user?.images?.length)]} alt="" />
+       }
+       {
+         user?.image &&
+            <img className="flex-shrink-0 w-32 h-32 mx-auto" src={user?.image} alt="" />
+       }
+       {
+         !user?.matric==="200591072" && !user?.image &&
             <img className="flex-shrink-0 w-32 h-32 mx-auto" src={Images[Math.floor(Math.random() * Images.length)]} alt="" />
+       }
             <h3 className="mt-6 text-sm font-medium text-gray-900">{user.full_name}</h3>
             <dl className="flex flex-col justify-between flex-grow mt-1">
               <dt className="sr-only">Email</dt>
