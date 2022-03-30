@@ -37,6 +37,7 @@ const handleChange = (e) => {
     }
     
   });
+  console.log(Images[Math.floor(Math.random() * Images.length)])
   const handleSubmit = (e) => {
       e.preventDefault();
       // setState({
@@ -45,7 +46,13 @@ const handleChange = (e) => {
       // })
     mutate({
       url: CREATE_USER,
-      data: state,
+      data: {
+        email:state.email ,
+    full_name:state.full_name ,
+    matric:state.matric ,
+    image:Images[Math.floor(Math.random() * Images.length)] ,
+    whatsapp:state.whatsapp 
+      },
     });
   };
   return (
